@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* nilai specifi => 100 */
+      #text {
+        color: blue;
+        font-size: 22px;
+      }
+      /* nilai specif => 10 */
+      .content {
+        color: orangered;
+        font-size: 32px;
+      }
+
+      /* berapa nilai specificity = 100 +  10 + 10 + 10 = 130 */
+      #hero .sidebar .items .item{
+        color: pink;
+      }
+      /* 10 */
+      .item{
+        color: orangered;
+      }
+
+      /* navbar */
+      .items{
+        list-style: none;
+        display: flex;
+      }
+      .items li{
+        padding: 10px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+        <ul class="items">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+    <p class="content" id="text">saya ingin menjadi progremmer</p>
+    <div id="hero">
+        <div class="container">
+            <div class="sidebar">
+                <ul class="items">
+                    <li class="item">
+                        Home
+                    </li>
+                    <li class="item">
+                        Profile
+                    </li>
+                    <li class="item">
+                        kontact
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+   
+  </body>
+</html>
